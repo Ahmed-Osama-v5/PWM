@@ -43,7 +43,7 @@ void pwm2_Init(pwm_Mode_t mode)
  */
 void pwm2_Start(void)
 {
-	TCCR2 |= (1 << CS20); // start timer2 with N = 1
+	TCCR2 |= ((1 << CS22) | (1 << CS20)); // start timer2 with N = 128
 }
 
 /**

@@ -12,13 +12,9 @@
 #include <stdio.h>
 #include "pwm.h"
 
-
-
 int main(){
 
-	pwm_Mode_t mode = FAST_PWM;
-
-	pwm2_Init(mode);
+	pwm2_Init(PHASE_CORRECT_PWM);
 	pwm2_Set_Duty(50);
 	pwm2_Start();
 
