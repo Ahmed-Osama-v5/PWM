@@ -20,7 +20,7 @@ uint8_t pinNum2bitNum[] = { 0x01, 0x02, 0x04, 0x08, 0x10, 0x20, 0x40, 0x80 };
  *  Writes 8-bits to the specified destination register
  *
  **************************************************************************/
-static void writeRegister(uint8_t i2cAddress, uint8_t reg, uint8_t value)
+void writeRegister(uint8_t i2cAddress, uint8_t reg, uint8_t value)
 {
   I2C_Send_start();
   I2C_Send_Address(i2cAddress);
@@ -34,7 +34,7 @@ static void writeRegister(uint8_t i2cAddress, uint8_t reg, uint8_t value)
  * Reads 8-bits from the specified source register
  *
  **************************************************************************/
-static uint16_t readRegister(uint8_t i2cAddress, uint8_t reg)
+uint16_t readRegister(uint8_t i2cAddress, uint8_t reg)
 {
   I2C_Send_start();
   I2C_Send_Address(i2cAddress);
